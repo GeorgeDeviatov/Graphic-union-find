@@ -88,8 +88,8 @@ if __name__ == "__main__":
 			h=1
 		#print(max(uf.ol_cost),height,uf.ol_cost)
 		for cost in uf.ol_cost:
-			o+=width/uf.n
-			pg.draw.polygon(screen,(255,0,0),((o,cost*h),(o,cost*h+2),(o+2,h*cost+2),(o+2,h*cost)))
+			o+=width/len(uf.ol_cost)
+			pg.draw.polygon(screen,(255,0,0),((o,height-cost*h),(o,height-cost*h+2),(o+2,height-h*cost+2),(o+2,height-h*cost)))
 		o=0
 		for tot_cost in uf.ol_tot:
 			o+=width/uf.n
